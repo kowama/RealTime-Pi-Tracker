@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>RealTime GPS Tracker</title>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.19.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <header class="row">
+        <div class="col-md-6">
+          <h1>Real Time Pi Tracker</h1>
+          <p>Supervised by Dr. Otman AGHZOUT</p>
+        </div>
+        <div class="col-md-6">
+          <img src="assets\logo-web-ensa-tetouan.png" class="float-right mw-100" />
+        </div>
+      </header>
+      <main class="col-md-10 mx-auto my-1">
+        <div class="row">
+          <div>
+            <button  class="btn p-1 my-1 mx-0 text-white" onclick="debug()" style="background-color: #174af3;">debug</button>
+          </div>
+          <div class="mx-auto col-6 col-md-3"><button class="btn btn-success w-100 p-1 my-1" id="start-btn">Start
+              Tracking</button>
+          </div>
+          <div>
+            <button  class="btn p-1 my-1 mx-0 text-white" onclick="debug()" style="background-color: #174af3;">debug</button>
+          </div>
+        </div>
+        <div class="row">
+          <div id="map-canvas"></div>
+        </div>
+      </main>
+      <footer class="row">
+        <p class="mx-auto">&copy; kowama & ayoub | GSTR3 | ENSATé | 2019</p>
+      </footer>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+
+    <script src="app.js"> </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB5K4yWZfOrrlqezZbhkXDQikB93JAYnJQ&callback=initialize"></script>
+  </div>
+
+</body>
+
+</html>
